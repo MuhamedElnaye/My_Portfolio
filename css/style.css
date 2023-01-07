@@ -1,0 +1,352 @@
+/* ############# start global rules  ############# */
+* {
+  /* (*)meaning do this for all elements 
+    it's using to make elements don't change content*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* doing element moving smooth */
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ############# start components  #############*/
+
+/* ############# End components  #############*/
+
+/*another way to write the font
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@
+0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;
+1,500;1,600;1,700;1,800;1,900&display=swap'); */
+
+:root {
+  --section-transrion: 0.3s;
+  --mian-color: #3a6cf4;
+  --section-padding: 60px;
+}
+
+/* ############# End global rules  ############# */
+
+/* 1-samll screen for the container */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* 2-medim screen for the container*/
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* 3-larg screen for the container*/
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+body {
+  background-color: #000000;
+  /* background-color: #000016; */
+  /* background-image: url(../images/work2.jpg); */
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ############# start header  ############# */
+.heading {
+  background-color: #f0f0f0;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  /* position: relative; */
+}
+
+.heading .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 18px;
+}
+
+.heading .container .logo {
+  font-size: 1.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--mian-color);
+  text-decoration: none;
+  padding: 3px 16px;
+  border-radius: 28px;
+  transition: var(--section-transrion);
+}
+
+.heading .container .logo:hover {
+  background-color: #523636;
+  color: white;
+}
+
+.navigation a {
+  color: var(--mian-color);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.2em;
+  padding-left: 10px;
+  padding: 5px;
+  transition: var(--section-transrion);
+}
+
+.navigation a:hover {
+  color: white;
+  background-color: #523636;
+  border-radius: 22px;
+}
+
+@media (max-width: 767px) {
+  .heading .container .logo {
+    font-size: 1.2em;
+  }
+
+  .navigation a:not(:last-child) {
+    padding-left: 2px;
+  }
+
+  .navigation a {
+    font-size: 1em;
+  }
+}
+
+/* ############# End header  ############# */
+/* ############# start section  ############# */
+.main {
+  background-image: url(../images/section1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: aliceblue;
+  height: calc(100vh - 64px);
+  position: relative;
+  /* border-radius: 40px; */
+}
+
+.main .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: absolute;
+  padding-top: 20%;
+}
+
+/* @media (max-width:767px) {
+    .main .container {
+        padding-top: 60%;
+    }
+} */
+
+.content {
+  background-color: #9f9696d6;
+  padding: 10px 7px 10px 10px;
+  border-radius: 20px;
+  text-align: center;
+}
+@media (min-width: 377px) and (max-width: 668px) {
+  .content {
+    padding: 1px;
+  }
+  .main .container {
+    padding-top: 10%;
+  }
+}
+.main .container h2 {
+  font-size: 22px;
+  font-weight: 500;
+  /* color: #101320; */
+  color: white;
+  line-height: 1.5;
+}
+
+.main .content span {
+  font-size: 30px;
+  color: #121c35;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.main .content h3 {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: white;
+}
+
+.main .content .main-btn {
+  text-decoration: none;
+  color: white;
+  background-color: #121246;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 17px;
+  display: inline-block;
+  transition: var(--section-transrion) linear;
+}
+
+.main .content .main-btn:hover {
+  transform: scale(1.2, 1.2);
+  background-color: #171720;
+}
+
+.social-icons a {
+  color: #fff;
+  padding-right: 20px;
+  font-size: 1.7em;
+}
+
+/* ############# End section  ############# */
+/* ############# Start Services  ############# */
+.cards {
+  /* background-color: rgb(197, 197, 197); */
+  background-color: #000016;
+  margin-bottom: 50px;
+}
+.cards .title {
+  display: flex;
+  justify-content: center;
+  font-size: 3.2em;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 17px;
+  margin: 63px 10px 46px;
+  letter-spacing: 2px;
+  padding: 10px;
+  background-color: #0d1b66;
+}
+.content2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.content2 .card {
+  width: 21.25em;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 25px rgb(77 93 255);
+  text-align: center;
+  border-radius: 19px;
+  padding: 20px;
+  background-color: #d7e9d7;
+  transition: var(--section-transrion);
+}
+@media (max-width: 767px) {
+  .content2 .card {
+    padding: 20px;
+  }
+}
+.content2 .card:hover {
+  transform: scale(1.1, 1.1);
+  background-color: white;
+}
+.icon {
+  color: #0d1b66;
+  font-size: 60px;
+}
+.content2 .card .head {
+  color: #073016;
+  margin-top: 15px;
+  margin-bottom: 17px;
+  letter-spacing: 0.5px;
+  font-weight: 900;
+}
+.content2 .card .par {
+  font-size: 19px;
+  color: #0000009e;
+}
+
+/* ############# End Services  ############# */
+/* ############# start Project  ############# */
+#project {
+  background-color: #000016;
+}
+#project .content2 {
+  margin-top: 50px;
+}
+#project .content2 .card {
+  /* background-color: #fff; */
+  border: 2px solid blue;
+  min-height: 14em;
+}
+.content2 .card .project-image img {
+  /* flex-basis: 40px; */
+  width: 100%;
+  /* height: 100%; by default 100%*/
+}
+.project-catogery {
+  font-size: 1em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+.project-title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 13px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.more-details {
+  text-decoration: none;
+}
+.more-details:hover {
+  color: #3c3197;
+}
+/* ############# End Project  ############# */
+/* ############# start Contact  ############# */
+#contact .icon {
+  font-size: 43px;
+}
+
+#contact h3 {
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#contact p {
+  font-size: 25px;
+}
+/* ############# End Contact  ############# */
+/* ************** Start Footer  **************************** */
+.footer {
+  color: white;
+  background-color: #121116;
+  text-align: center;
+  font-size: 30px;
+  padding: 20px 10px;
+}
+
+.footer span {
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+@media (max-width: 767px) {
+  .footer {
+    font-size: 16px;
+  }
+}
+
+/* ************** End Footer  **************************** */
