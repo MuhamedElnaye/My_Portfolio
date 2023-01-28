@@ -161,7 +161,7 @@ body {
   text-align: center;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 767px) {
   .content {
     top: 44%;
     left: 35%;
