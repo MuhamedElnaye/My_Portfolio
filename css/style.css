@@ -64,16 +64,19 @@ body {
 
 /* ############# start header  ############# */
 .heading {
-  background-color: #f0f0f0;
   width: 100%;
   position: fixed;
   z-index: 999;
   /* position: relative; */
+  background-color: rgb(253, 253, 253);
+  -webkit-box-shadow: 0 0 10px #ddd;
+  -moz-box-shadow: 0 0 10px #ddd;
+  box-shadow: 0 0 10px #ddd;
 }
 
 .heading .container {
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 18px 18px;
@@ -96,7 +99,7 @@ body {
 }
 
 .navigation a {
-  color: var(--mian-color);
+  color: #b36c0e;
   text-decoration: none;
   font-weight: 400;
   font-size: 1.2em;
@@ -113,15 +116,27 @@ body {
 
 @media (max-width: 767px) {
   .heading .container .logo {
-    font-size: 1.2em;
+    font-size: 1.6em;
   }
 
   .navigation a:not(:last-child) {
     padding-left: 2px;
   }
+  .heading .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 20px;
+  }
+  .navigation {
+    margin-top: 7px;
+  }
 
   .navigation a {
-    font-size: 1em;
+    font-size: 1.2em;
+    padding: 10px;
+    color: #b36c0e;
   }
 }
 
@@ -130,39 +145,26 @@ body {
 .main {
   background-image: url(../images/section1.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
   color: aliceblue;
   height: calc(100vh - 64px);
   position: relative;
-  /* border-radius: 40px; */
 }
-
-.main .container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  position: absolute;
-  padding-top: 20%;
-}
-
-/* @media (max-width:767px) {
-    .main .container {
-        padding-top: 60%;
-    }
-} */
 
 .content {
-  background-color: #9f9696d6;
-  padding: 10px 7px 10px 10px;
+  position: absolute;
+  background-color: #a79d9dd6;
   border-radius: 20px;
+  padding: 20px 10px;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
   text-align: center;
 }
-@media (min-width: 377px) and (max-width: 668px) {
+
+@media (max-width: 767px) {
   .content {
-    padding: 1px;
-  }
-  .main .container {
-    padding-top: 10%;
+    top: 44%;
+    left: 35%;
   }
 }
 .main .container h2 {
