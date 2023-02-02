@@ -219,6 +219,9 @@ body {
   padding-right: 20px;
   font-size: 1.7em;
 }
+.social-icons i:hover {
+  color: var(--mian-color);
+}
 
 /* ############# End section  ############# */
 /* ############# Start Services  ############# */
