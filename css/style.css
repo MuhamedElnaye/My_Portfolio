@@ -159,12 +159,16 @@ body {
   left: 20%;
   transform: translate(-50%, -50%);
   text-align: center;
+  min-width: 270;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 767px) {
   .content {
-    top: 44%;
-    left: 35%;
+    top: 60%;
+    left: 155px;
+    width: 283px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 .main .container h2 {
@@ -346,7 +350,7 @@ body {
 
 .footer span {
   font-weight: bold;
-  color: var(--main-color);
+  color: var(--mian-color);
 }
 
 @media (max-width: 767px) {
